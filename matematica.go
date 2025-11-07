@@ -1,17 +1,10 @@
 package main
 
-import (
-	"fmt"
-)
-
 func MCD_iterativa(a, b int) int {
 	// Algoritmo di Euclide
 	// Versione Iterativa
 	for b != 0 {
 		a, b = b, a%b
-		// equivalente a
-		// a=b
-		// b=a%b
 	}
 	return a
 }
@@ -46,13 +39,4 @@ func scomposizioneFattoriPrimi(num int) []int {
 	}
 
 	return fattori
-}
-
-func esempioChiamataMatematica() {
-	a := 111
-	b := 11
-	println(MCD_ricorsiva(a, b))
-	println(MCD_iterativa(a, b))
-	println(mcm(a, b))
-	fmt.Println(scomposizioneFattoriPrimi(110))
 }
