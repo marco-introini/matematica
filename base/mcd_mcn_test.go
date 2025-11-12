@@ -85,3 +85,10 @@ func ExampleMcmSlice() {
 	fmt.Println(mcm)
 	// Output: 24
 }
+
+func TestScomposizioneFattoriPrimi(t *testing.T) {
+	num := 12
+	got := ScomposizioneFattoriPrimi(num)
+	expected := []int{2, 2, 3}
+	assertCorrectSlice(t, got, expected)
+}
