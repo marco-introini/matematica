@@ -1,6 +1,6 @@
 package base
 
-func MCD_iterativa(a, b int) int {
+func Mcd2(a, b int) int {
 	// Algoritmo di Euclide
 	// Versione Iterativa
 	for b != 0 {
@@ -9,15 +9,15 @@ func MCD_iterativa(a, b int) int {
 	return a
 }
 
-func MCD_ricorsiva(a, b int) int {
+func Mcd(a, b int) int {
 	// Algoritmo di Euclide
 	// Versione Ricorsiva
 	if b == 0 {
 		return a
 	}
-	return MCD_ricorsiva(b, a%b)
+	return Mcd(b, a%b)
 }
 
-func mcm(a, b int) int {
-	return (a * b) / MCD_ricorsiva(a, b)
+func Mcm(a, b int) int {
+	return (a * b) / Mcd(a, b)
 }

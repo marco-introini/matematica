@@ -1,18 +1,33 @@
 package base
 
 import (
+	"fmt"
 	"testing"
 )
 
-func TestMCD_ricorsiva(t *testing.T) {
+func TestMCD(t *testing.T) {
 	t.Run("MCD 110 e 11", func(t *testing.T) {
-		got := MCD_ricorsiva(110, 11)
+		got := Mcd(110, 11)
 		want := 11
 		assertCorrectValue(t, got, want)
 	})
 	t.Run("MCD 50 e 4", func(t *testing.T) {
-		got := MCD_ricorsiva(50, 4)
+		got := Mcd(50, 4)
 		want := 2
 		assertCorrectValue(t, got, want)
 	})
+}
+
+func ExampleMcd() {
+	mcd := Mcd(110, 11)
+	fmt.Println(mcd)
+	// Output: 11
+}
+
+func BenchmarkMcd(b *testing.B) {
+	for b.Loop() {
+		//a := generaInteroCasuale(1, 1000000)
+		//b := generaInteroCasuale(1, 1000000)
+		Mcd(1100, 13222)
+	}
 }

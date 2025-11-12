@@ -1,6 +1,6 @@
 package base
 
-func scomposizioneFattoriPrimi(num int) []int {
+func ScomposizioneFattoriPrimi(num int) []int {
 	var fattori []int
 	divisore := 2
 
