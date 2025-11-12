@@ -18,6 +18,21 @@ func TestMCD(t *testing.T) {
 	})
 }
 
+func TestMCM(t *testing.T) {
+	t.Run("MCM 110 e 11", func(t *testing.T) {
+		got := Mcm(110, 11)
+		want := 110
+		assertCorrectValue(t, got, want)
+	})
+}
+
+func TestMcdSlice(t *testing.T) {
+	numbers := []int{110, 10, 50, 4}
+	got := McdSlice(numbers)
+	want := 2
+	assertCorrectValue(t, got, want)
+}
+
 func ExampleMcd() {
 	mcd := Mcd(110, 11)
 	fmt.Println(mcd)
