@@ -42,5 +42,32 @@ func McdSlice(numbers []int) int {
 }
 
 func Mcm(a, b int) int {
+	if a == 0 || b == 0 {
+		return 0
+	}
+
 	return (a * b) / Mcd(a, b)
+}
+
+// McmSlice calcola il minimo comune multiplo di uno slice di numeri
+func McmSlice(numbers []int) int {
+	// Gestione casi limite
+	if len(numbers) == 0 {
+		return 0
+	}
+	if len(numbers) == 1 {
+		return numbers[0]
+	}
+
+	// Calcola il MCM di tutti i numeri nello slice
+	risultato := numbers[0]
+	for i := 1; i < len(numbers); i++ {
+		risultato = Mcm(risultato, numbers[i])
+		// Se uno dei numeri è 0, il risultato è 0
+		if risultato == 0 {
+			break
+		}
+	}
+
+	return risultato
 }
