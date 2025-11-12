@@ -1,6 +1,8 @@
-package main
+package base
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestMCD_ricorsiva(t *testing.T) {
 	t.Run("MCD 110 e 11", func(t *testing.T) {

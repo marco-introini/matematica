@@ -1,4 +1,4 @@
-package main
+package base
 
 func MCD_iterativa(a, b int) int {
 	// Algoritmo di Euclide

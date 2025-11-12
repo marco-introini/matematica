@@ -1,4 +1,4 @@
-package main
+package base
 
 func scomposizioneFattoriPrimi(num int) []int {
 	var fattori []int
